@@ -14,9 +14,25 @@
  * «Оформляем заказ на сумму [сумма] со скидкой [скидка]%»
  */
 
-const totalSpent = 2000;
-let payment = 500;
+const totalSpent = 3000;
+const payment = 2000;
 let discount = 0;
+let sum;
+let message;
+
+if (totalSpent + payment < 100) {
+    discount = 0;
+} else if (totalSpent + payment >= 100 && totalSpent + payment < 1000) {
+    discount = 2;
+} else if (totalSpent + payment >= 1000 && totalSpent + payment < 5000) {
+    discount = 5;
+} else {
+    discount = 10;
+}
+
+sum = payment - (payment * discount) / 100;
+message = `Оформляем заказ на сумму ${sum} со скидкой ${discount}%`;
+console.log(message);
 
 // 'Бронзовый партнер, скидка 2%'
 // 'Серебрянный партнер, скидка 5%'

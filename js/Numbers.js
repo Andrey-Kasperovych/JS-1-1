@@ -55,3 +55,7 @@ const resualt = Math.round(Math.random() * (max - min) + min);
 console.log(Math.round(Math.random() * (max - min) + min));
 
 console.log(resualt);
+
+const num = 20;
+const result = true && 5 > 3 && 'javascript';
+console.log(result); // true
